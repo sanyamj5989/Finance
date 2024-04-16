@@ -1,10 +1,6 @@
-# import numpy as np
-from pyarrow import null
+
+
 from scipy.stats import norm
-# import matplotlib.pyplot as plt
-# import streamlit as st
-# import seaborn as sns
-# import streamlit.components.v1 as components
 import math
 
 def blackscholescall(S, K, r, SD, t):
@@ -29,16 +25,7 @@ def deltahedgingcall (S, K, r, Us, Ds, t):
     f = -x + (d*S)
     return f
 
-# def deltahedgingcall (S, K, r, SD, t):
-#     Cu = (1+SD)*S
-#     Cd = (1-SD)*S
-#     Cu = Us - K
-#     Cd = 0
-#     d = Delta(Us,Ds,Cu,Cd)
-#     NetInflow = Ds*d
-#     x = NetInflow*math.exp(-r*t)
-#     f = -x + (d*S)
-#     return f
+
 def deltahedgingput (S, K, r, Us, Ds, t):
     Cu = 0
     Cd = K - Ds
